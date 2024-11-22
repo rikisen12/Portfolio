@@ -372,20 +372,17 @@ html {
             modal.style.display = "none";
         }
     });
-    const form = document.getElementById("contact-form");
-const responseMessage = document.getElementById("form-response"); // Ensure this ID matches your HTML
-
-form.addEventListener("submit", async (event) => {
+    form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const formData = new FormData(form);
     const formObject = Object.fromEntries(formData.entries());
 
     try {
-        const response = await fetch("http://localhost:3000/submit", {
+        const response = await fetch("/api/submit", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formObject)
+            body: JSON.stringify(formObject),
         });
 
         if (response.ok) {
@@ -402,6 +399,7 @@ form.addEventListener("submit", async (event) => {
         responseMessage.style.color = "red";
     }
 });
+
 
 </script>
 
