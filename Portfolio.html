@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
     <title>My Personal Portfolio</title>    
     <style>
         body {
@@ -56,11 +60,58 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .about img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
+/* About Me Section */
+.about-me-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Optional background */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image and text */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content {
+        margin-top: 20px;
+    }
+}
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -220,6 +271,69 @@ html {
     cursor: pointer;
     color: #333;
 }
+/* Connect Section */
+.connect-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Optional background color */
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.connect-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change to your preferred hover color */
+}
+
+/* Download CV Button */
+.download-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.download-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .download-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
 #contact form {
     display: flex;
     flex-direction: column;
@@ -234,20 +348,6 @@ html {
     border-radius: 5px;
     font-size: 1rem;
 }
-
-#contact button {
-    padding: 10px;
-    background: #6C63FF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contact button:hover {
-    background: #5754D0;
-}
-
     </style>
 </head>
 <body>
@@ -260,11 +360,24 @@ html {
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <img src="my_img.jpg" alt="Your Photo">
-        <p>Hello! I'm Post Graduate Student with a passion for Achieved My Goals by being able to continuously learn and improve the necessary skills and knowledge needed to help push both the company and myself forward into success. I specialize in Computer Application .</p>
-    </section>
+<section id="about-me" class="about-me-section">
+    <div class="about-container">
+        <!-- Picture -->
+        <div class="about-image">
+            <img src="my_img.jpg" alt="PRATIK KUMAR BOSE">
+        </div>
+        <!-- Content -->
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Post Graduate Student with a passion for Achieved My Goals by being able to continuously learn and improve the necessary skills and knowledge needed to help push both the company and myself forward into success. I specialize in Computer Application.
+            </p>
+            <p>
+                Outside of work, I enjoy travelling & Photography. Let's connect and collaborate!
+            </p>
+        </div>
+    </div>
+</section>
     <section id="timeline">
         <h2>My Journey</h2>
         <div class="timeline-item">
@@ -303,14 +416,7 @@ html {
                 <p>Short description of the project.</p>
             </div>
         </div>     
-    </section>
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">Your LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/your-profile" target="_blank">Your GitHub</a></p>
-
-    </section>
+    </section>  
     <section id="contact">
         <p id="form-response"></p>
         <h2>Contact Me</h2>
@@ -320,17 +426,40 @@ html {
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-    </section>    
+    </section>   
+    <section id="connect" class="connect-section">
+        <h2>Let's Connect</h2>
+        <div class="connect-content">
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/your-profile" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/your-username" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/your-handle" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:your-email@example.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+    
+            <!-- Download CV Button -->
+            <a href="path-to-your-cv.pdf" class="download-btn" download>
+                <i class="fas fa-file-download"></i> Download CV
+            </a>
+        </div>
+    </section>   
     <div id="loader">
     <div class="spinner"></div>
 </div>  
     <footer>
-        <p>&copy; 2024 Your Name. Built with ❤️.</p>
+        <p>Copyright &copy; ImmortalVibe. Built with  <a href="https://github.com/your-username" target="_blank" title="GitHub">PRATIK KUMAR BOSE
+            <i class="fab fa-github"></i>
+        </a> .</p>
     </footer>
-    <script>
-        const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-        const systemSettingLight = window.matchMedia("(prefers-color-scheme: light)");
-    </script> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -353,55 +482,22 @@ html {
     });
 </script>
 <script>
-    const modal = document.getElementById("portfolio-modal");
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-    const closeModal = document.querySelector(".modal .close");
-
-    portfolioItems.forEach(item => {
-        item.addEventListener("click", () => {
-            modal.style.display = "flex";
-        });
-    });
-
-    closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-    form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const formObject = Object.fromEntries(formData.entries());
-
-    try {
-        const response = await fetch("/api/submit", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formObject),
-        });
-
-        if (response.ok) {
-            responseMessage.textContent = "Message sent successfully!";
-            responseMessage.style.color = "green";
-            form.reset();
-        } else {
-            responseMessage.textContent = "Failed to send the message. Please try again.";
-            responseMessage.style.color = "red";
-        }
-    } catch (error) {
-        console.error("Fetch error:", error);
-        responseMessage.textContent = "An error occurred. Please try again later.";
-        responseMessage.style.color = "red";
-    }
-});
-
-
-</script>
-
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyzTAP8xKjFqlWb2m-RH98TGn8-LgA6uVnLJur2ewwq/dev' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+ 
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
