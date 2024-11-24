@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="Portfolio.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -58,24 +58,6 @@
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
 
-    <!-- <script src="Portfolio.js"></script> -->
-     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzECcKhBHgiYlH8d9W-aoRJX7QnK0E6eEe5BisEQYMsQhoFjWNt-5KO7yqgXDzrMwwFQw/exec' // add your own app script link here
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-     </script>
+    <script src="style.js"></script>
 </body>
 </html>
