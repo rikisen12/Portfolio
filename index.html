@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="Portfolio.css"> -->
      <style>
         /* General Styles */
 body {
@@ -76,7 +75,6 @@ footer {
         margin: 0.5rem 0;
     }
 }
-
      </style>
 </head>
 <body>
@@ -115,21 +113,23 @@ footer {
         </div>
     </section>
 
-    <section id="contact">
+    <section class="contact-right">
         <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
         </form>
-        <p id="form-response" style="display: none;"></p>
+        <span id="msg"></span>
     </section>
 
     <footer>
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
-    <script>
+
+    <!-- <script src="Portfolio.js"></script> -->
+     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzECcKhBHgiYlH8d9W-aoRJX7QnK0E6eEe5BisEQYMsQhoFjWNt-5KO7yqgXDzrMwwFQw/exec' // add your own app script link here
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
@@ -146,7 +146,6 @@ footer {
         })
         .catch(error => console.error('Error!', error.message))
     })
-    </script>
-    <!-- <script src="style.js"></script> -->
+     </script>
 </body>
 </html>
