@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Name - Portfolio showcasing my projects and skills.">
+    <meta name="keywords" content="portfolio, web developer, designer, projects">
+    <meta name="author" content="Your Name">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>MY PERSONAL PORTFOLIO</title>
+</head>
+<body>
+    <header>
+        <h1>PRATIK KUMAR BOSE</h1>
+        <p>POST GRADUATE STUDENT WITH INTEREST ON ETHICAL HACKING AND WEB DEVELOPMENT</p>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+<section id="about-me" class="about-me-section">
+    <div class="about-container">
+        <!-- Picture -->
+        <div class="about-image">
+            <img src="images/my_img.jpg" alt="PRATIK KUMAR BOSE">
+        </div>
+        <!-- Content -->
+        <div class="about-content">
+            <h2>ABOUT ME</h2>
+            <p>
+                HELLO! I'M POST GRADUATE STUDENT WITH A PASSION FOR ACHIEVED MY GOALS BY BEING ABLE TO CONTINUOUSLY LEARN AND IMPROVE 
+                THE NECESSARY SKILLS AND KNOWLEDGE NEEDED TO HELP PUSH BOTH THE COMPANY AND MYSELF FORWARD INTO SUCCESS. I SPECIALIZE 
+                IN COMPUTER APPLICATION.
+            </p>
+            <p>
+                OUTSIDE OF WORK, I ENJOY TRAVELLING & PHOTOGRAPHY. LET'S CONNECT AND COLLABORATE!
+            </p>
+        </div>
+    </div>
+</section>
+    <section id="timeline">
+        <h2>MY JOURNEY</h2>
+        <div class="education-section">
+            <div class="timeline-date">2024</div>
+            <div class="education-item">
+                <h3>MASTER'S DEGREE IN COMPUTER APPLICATION</h3>
+                <p>BRAINWARE UNIVERSITY</p>
+                <p>RESULT : 81.07%</p>
+            </div>
+            <div class="timeline-date">2022</div>
+            <div class="education-item">
+                <h3>BACHELOR'S DEGREE IN COMPUTER APPLICATION</h3>
+                <p>BRAINWARE UNIVERSITY</p>
+                <p>RESULT : 88.64%</p>
+            </div>
+        </div>
+        <div class="education-section">
+            <div class="timeline-date">2019</div>
+            <div class="education-item">
+                <h3>HIGHER SECONDARY EDUCATION</h3>
+                <p>WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION</p>
+                <p>RESULT : 62.2%</p>
+            </div>
+            <div class="timeline-date">2016</div>
+            <div class="education-item">
+                <h3>SECONDARY EDUCATION</h3>
+                <p>WEST BENGAL BOARD OF SECONDARY EDUCATION</p>
+                <p>RESULT : 63.14%</p>
+            </div>
+        </div>
+    </section> 
+    <section id="portfolio" class="portfolio">
+        <h2>MY WORK</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="images\download.jpg" alt="Project 1" loading="lazy">
+                
+                <a href="https://github.com/rikisen12/COLLEGE-MAJOR-PROJECTS" target="_blank">
+                    <h3>WATER DEPTH PREDICTION</h3></a>
+                <p>IN THIS PROJECT USED PYTHON, DNN MODEL, NEURAL NETWORK, EXPLORATORY DATA ANALYSIS.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images\student_portfolio.png" alt="Project 2">
+                <a href="https://github.com/rikisen12/COLLEGE-MAJOR-PROJECTS" target="_blank">
+                    <h3>MY PORTFOLIO</h3></a>
+                <p>IN THIS PROJECT USED HTML, CSS, JAVASCIRT, APPSCRIPT AND GOOGLE SHEET FOR DATA STORE</p>
+            </div>
+        </div>     
+    </section>  
+    <section id="contact">
+        <h2>CONTACT ME</h2>
+        <form id="contact-form" name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">SUBMIT</button>
+        </form>
+        <span id="msg"></span>
+    </section>   
+    <section id="connect" class="connect-section">
+        <h2>LET'S CONNECT</h2>
+        <div class="connect-content">
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/pratik-bose-571114300/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/rikisen12" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                </a>
+                <a href="mailto:rikisen2001@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.facebook.com/pratikbose03" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+            </div>   
+            <!-- Download CV Button -->
+            <a href="MY CV.pdf" class="download-btn" download>
+                <i class="fas fa-file-download"></i> DOWNLOAD MY CV
+            </a>
+        </div>
+    </section>   
+    <div id="loader">
+    <div class="spinner"></div>
+</div>  
+    <footer>
+        <p>COPYRIGHT &copy; IMMORTALVIBE. BUILT BY  
+            <a href="https://github.com/rikisen12" target="_blank" title="GitHub">PRATIK KUMAR BOSE
+        </a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
