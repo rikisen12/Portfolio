@@ -8,7 +8,7 @@
         loader.style.display = 'none';
     });
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyiKt_bDV_nMJBWFQ_N4iHsKhFCtBi7nv4cCiUtzD-YSLhhD3J3PhksvAV6oX95_ovf_Q/exec' // add your own app script link here
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxt3Cq74tDcJXxMc8UlUJhTRfy8LSMy4PTVbipvgF2rWNYNdcu8zZxtTUxzhBsbCrZx5w/exec' // add your own app script link here
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
   
